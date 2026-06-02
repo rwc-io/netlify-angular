@@ -7,3 +7,6 @@ node_modules
 # editor tmp files
 .*.swp
 .*.swo
+.angular/
+dist/
+coverage/
