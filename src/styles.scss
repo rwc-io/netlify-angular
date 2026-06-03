@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "mdb-angular-ui-kit/assets/scss/mdb.scss";
+
+// Font Awesome
+$fa-font-path: "/app/node_modules/font-awesome/fonts";
+@import "font-awesome/scss/font-awesome.scss";

@@ -1,49 +1,54 @@
 <!-- navigation placeholder -->
-<!-- in a more complex app this is probably a custom component -->
 <header>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark blue scrolling-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#"><strong>{{ title }}</strong></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Opinions</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav nav-flex-icons">
-        <li class="nav-item">
-          <a class="nav-link">
+      <button
+        class="navbar-toggler"
+        type="button"
+        (click)="navbar.toggle()"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" mdbCollapse #navbar="mdbCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Opinions</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav d-flex flex-row">
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link">
               <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link">
               <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link">
               <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
-          </a>
-        </li>
-      </ul>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
-
 </header>
-<!-- navigation placeholder -->
 
 <!-- main content placeholder -->
 <main>
@@ -52,14 +57,14 @@
       <div class="col-md-6">
         <div class="card">
           <img class="card-img-top" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-          <div class="card-body">
+          <div class="card-body text-center">
             <h1 class="card-title">
               {{ title }}
             </h1>
             <p class="card-text">
               Here are some links to help you start:
             </p>
-            <ul class="card-text list-group">
+            <ul class="list-group list-group-flush">
               <li class="list-group-item">
                 <a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a>
               </li>
