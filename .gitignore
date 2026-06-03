@@ -10,3 +10,4 @@ node_modules
 .angular/
 dist/
 coverage/
+dev_server.log
