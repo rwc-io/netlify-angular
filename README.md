@@ -52,7 +52,7 @@ This project uses modern Angular features:
 
 ## Angular framework README
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 21.2.13.
+This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1 and subsequently updated to version 21.2.13.
 
 ### Development server
 
@@ -72,7 +72,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ### Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). Note: Protractor is deprecated, and it is recommended to use modern alternatives like Playwright or Cypress for new tests.
+Run `npm run e2e` to execute the end-to-end tests via [Playwright](https://playwright.dev/).
 
 ### Further help
 
