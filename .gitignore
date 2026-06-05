@@ -11,3 +11,7 @@ node_modules
 dist/
 coverage/
 dev_server.log
+
+# Playwright
+playwright-report/
+test-results/

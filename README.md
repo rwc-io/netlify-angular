@@ -12,7 +12,7 @@ NetlifyAngular is:
 
 Click this button to clone this repo into your own, and set up a Netlify deployment under your account. If you've already cloned the repo, or prefer to set up the deployment manually, go to the netlify app to [create a new github connection](https://app.netlify.com/start).
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dchaley/netlify-ng7)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dchaley/netlify-angular)
 
 Once your app is set up and running, go to your domain:
 
@@ -22,7 +22,7 @@ and you'll see your live Angular application!
 
 ## Development
 
-This assumes that your Node version is compatible with Angular7: 8.x or 10.x (as of 2019-02-22)
+This assumes that your Node version is compatible with Angular 21: v22.x or later.
 
 After cloning the repo:
 
@@ -36,17 +36,23 @@ See "Angular framework README" below for more information on developing an Angul
 
 ### Netlify configuration
 
-[netlify.toml](https://github.com/dchaley/netlify-angular/blob/master/netlify.toml) sets the build output folder `dist/netlify-angular`. When running a netlify production build we pass the `--prod` flag to the angular builder for an optimized build.
+[netlify.toml](https://github.com/dchaley/netlify-angular/blob/master/netlify.toml) sets the build output folder `dist/netlify-angular`. Modern Angular builds use the production configuration by default.
 
 ### FontAwesome icon configuration
 
-angular-fontawesome icons are configured in [app.module.ts](https://github.com/dchaley/netlify-angular/blob/master/src/app/app.module.ts).
+angular-fontawesome icons are configured in [src/app/app.component.ts](https://github.com/dchaley/netlify-angular/blob/master/src/app/app.component.ts).
 
 In a more complex app, you might do this in a helper somewhere.
 
+### Modern Angular Features
+
+This project uses modern Angular features:
+* **Standalone Components**: The application is built using standalone components, removing the need for `NgModule`.
+* **Zoneless Change Detection**: The application uses zoneless change detection for improved performance, as configured in `src/main.ts`.
+
 ## Angular framework README
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1 and subsequently updated to version 21.2.13.
 
 ### Development server
 
@@ -58,7 +64,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ### Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. By default, `ng build` uses the production configuration for an optimized build.
 
 ### Running unit tests
 
@@ -66,7 +72,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ### Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `npm run e2e` to execute the end-to-end tests via [Playwright](https://playwright.dev/).
 
 ### Further help
 
